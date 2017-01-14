@@ -4,6 +4,7 @@
 # License : GPLv2
 # License URL : http://www.gnu.org/licenses/gpl-2.0.html
 
+
 cat << "EOF"
 __  __       __    __  _     __      _
 \ \/ /\   /\/ / /\ \ \/_\   / _\ ___| |_ _   _ _ __
@@ -12,7 +13,7 @@ __  __       __    __  _     __      _
 /_/\_\ \_/    \/  \/\_/ \_/ \__/\___|\__|\__,_| .__/
                                               |_|
  >> Project Repo : https://github.com/s4n7h0/xvwa
- >> Scripted by : Sanoop Thomas a.k.a @s4n7h0
+ >> Scripted by : Sanoop Thomas aka @s4n7h0
 
 EOF
 
@@ -21,7 +22,7 @@ function clone(){
         git clone https://github.com/s4n7h0/xvwa.git $webroot/xvwa
         echo "Setting XVWA configuration"
 	sudo chmod -R 777 $webroot/xvwa
-        sed -i '2 c $XVWA_WEBROOT = "'$webroot'";' $webroot/xvwa/config.php
+        sed -i '2 c $XVWA_WEBROOT = "";' $webroot/xvwa/config.php
         sed -i '5 c $user = "'$uname'";' $webroot/xvwa/config.php
         sed -i '6 c $pass = "'$pass'";' $webroot/xvwa/config.php
 
